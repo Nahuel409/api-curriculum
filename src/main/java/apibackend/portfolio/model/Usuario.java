@@ -8,13 +8,14 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import java.io.Serializable;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
 @Entity
-public class Usuario {
+public class Usuario implements Serializable{
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     int id;
@@ -28,8 +29,7 @@ public class Usuario {
     //Contructor
     public Usuario(){}
     
-     public Usuario(int id, String nombre, String apellido, String titulo, String descripcion, String ubicacion, String fotoPerfil) {
-        this.id = id;
+     public Usuario(String nombre, String apellido, String titulo, String descripcion, String ubicacion, String fotoPerfil) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.titulo = titulo;

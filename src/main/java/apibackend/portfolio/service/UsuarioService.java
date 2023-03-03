@@ -12,7 +12,15 @@ public class UsuarioService{
     @Autowired
     UsuarioRepo usuarioRepo;
     
+    public Usuario crearUsuario(Usuario usuario){
+    return usuarioRepo.save(usuario);
+    }
+    
     public Usuario obtenerUsuario(int id){
         return usuarioRepo.findById(id).orElseThrow(()-> new UserNotFoundException("usuario no encontrado"));
+    }
+    
+    public Usuario editarUsuario(Usuario usuario){
+    return usuarioRepo.save(usuario);
     }
 }
