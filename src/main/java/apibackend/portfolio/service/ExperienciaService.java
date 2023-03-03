@@ -7,12 +7,14 @@ package apibackend.portfolio.service;
 import apibackend.portfolio.exception.UserNotFoundException;
 import apibackend.portfolio.model.Experiencia;
 import apibackend.portfolio.repository.ExperienciaRepo;
+import jakarta.transaction.Transactional;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Repository;
 
 @Repository
+@Transactional
 public class ExperienciaService {
 
     @Autowired

@@ -4,10 +4,12 @@ package apibackend.portfolio.service;
 import apibackend.portfolio.exception.UserNotFoundException;
 import apibackend.portfolio.model.Usuario;
 import apibackend.portfolio.repository.UsuarioRepo;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
+@Transactional
 public class UsuarioService{
     @Autowired
     UsuarioRepo usuarioRepo;
