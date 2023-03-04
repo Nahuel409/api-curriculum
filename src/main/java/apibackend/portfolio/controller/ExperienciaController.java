@@ -21,6 +21,7 @@ public class ExperienciaController {
     ExperienciaService experienciaService;
     
     @GetMapping
+    @CrossOrigin(origins = "http://localhost:4200")
     public ResponseEntity<List<Experiencia>>obtenerExperiencias(){
         List <Experiencia> experiencias = experienciaService.obtenerExperiencias();
         return new ResponseEntity<>(experiencias, HttpStatus.OK);

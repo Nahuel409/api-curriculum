@@ -17,11 +17,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/usuario")
+@CrossOrigin(origins="http://localhost:4200")
 public class UsuarioController {
     @Autowired
     private UsuarioService usuarioService;
     
-    @CrossOrigin(origins = "http://localhost:4200")
+    
     @GetMapping("/{id}")
      public ResponseEntity<Usuario> obtenerUsuario(@PathVariable("id") Integer id){
     Usuario usuario = usuarioService.obtenerUsuario(id);
@@ -34,7 +35,7 @@ public class UsuarioController {
         return new ResponseEntity<>(nuevo, HttpStatus.CREATED);
     }
     
-    
+   
      @PutMapping
      public ResponseEntity<Usuario> editarUsuario(@RequestBody Usuario usuario){
      Usuario usuarioEditar = usuarioService.editarUsuario(usuario);

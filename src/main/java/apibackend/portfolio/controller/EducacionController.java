@@ -20,6 +20,7 @@ public class EducacionController {
     EducacionService educacionService;
     
     @GetMapping
+    @CrossOrigin(origins = "http://localhost:4200")
     public ResponseEntity<List<Educacion>>obtenerEducacion(){
     List<Educacion> educaciones = educacionService.obtenerEducacion();
     return new ResponseEntity<>(educaciones,HttpStatus.ACCEPTED);
