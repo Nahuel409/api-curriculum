@@ -17,7 +17,8 @@ import org.springframework.web.bind.annotation.*;
  * @author dnvx8
  */
 @RestController
-@RequestMapping("/api/Skill")
+@RequestMapping("/api/skill")
+@CrossOrigin(origins = "http://localhost:4200")
 public class SkillController {
 
     @Autowired

@@ -23,15 +23,11 @@ public class Skill implements Serializable{
     @GeneratedValue(strategy= GenerationType.AUTO)
     private int idSkill;
     private String tituloSkill;
-    private String imgSkill;
-    private int porcentaje;
 
     public Skill() {
     }
 
-    public Skill(String tituloSkill, String imgSkill, int porcentaje) {
+    public Skill(String tituloSkill) {
         this.tituloSkill = tituloSkill;
-        this.imgSkill = imgSkill;
-        this.porcentaje = porcentaje;
     }
 }

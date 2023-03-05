@@ -24,14 +24,12 @@ public class Proyecto implements Serializable{
     private int idProyecto;
     private String tituloProyecto;
     private String descProyecto;
-    private String imgProyecto;
 
     public Proyecto() {
     }
 
-    public Proyecto(String tituloProyecto, String descProyecto, String imgProyecto) {
+    public Proyecto(String tituloProyecto, String descProyecto) {
         this.tituloProyecto = tituloProyecto;
         this.descProyecto = descProyecto;
-        this.imgProyecto = imgProyecto;
     }
 }

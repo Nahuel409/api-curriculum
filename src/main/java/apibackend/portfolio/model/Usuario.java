@@ -24,20 +24,25 @@ public class Usuario implements Serializable{
    private String titulo;
    private String descripcion;
    private String ubicacion;
-   private String fotoPerfil;
+   private String email;
+   private String telefono;
+   private String paginaweb;
  
     //Contructor
-    public Usuario(){}
-    
-     public Usuario(String nombre, String apellido, String titulo, String descripcion, String ubicacion, String fotoPerfil) {
+
+    public Usuario() {
+    }
+
+    public Usuario(String nombre, String apellido, String titulo, String descripcion, String ubicacion, String email, String telefono, String paginaweb) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.ubicacion = ubicacion;
-        this.fotoPerfil = fotoPerfil;
+        this.email = email;
+        this.telefono = telefono;
+        this.paginaweb = paginaweb;
     }
+     
     
-     
-     
 }
