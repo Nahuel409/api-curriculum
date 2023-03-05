@@ -15,12 +15,12 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/educacion")
+ @CrossOrigin(origins = "http://localhost:4200")
 public class EducacionController {
     @Autowired
     EducacionService educacionService;
     
     @GetMapping
-    @CrossOrigin(origins = "http://localhost:4200")
     public ResponseEntity<List<Educacion>>obtenerEducacion(){
     List<Educacion> educaciones = educacionService.obtenerEducacion();
     return new ResponseEntity<>(educaciones,HttpStatus.ACCEPTED);

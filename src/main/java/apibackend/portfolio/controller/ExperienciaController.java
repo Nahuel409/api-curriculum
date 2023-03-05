@@ -16,12 +16,12 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/experiencia")
+@CrossOrigin(origins="http://localhost:4200")
 public class ExperienciaController {
     @Autowired
     ExperienciaService experienciaService;
     
     @GetMapping
-    @CrossOrigin(origins = "http://localhost:4200")
     public ResponseEntity<List<Experiencia>>obtenerExperiencias(){
         List <Experiencia> experiencias = experienciaService.obtenerExperiencias();
         return new ResponseEntity<>(experiencias, HttpStatus.OK);
